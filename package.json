@@ -1,0 +1,11 @@
+{
+    "name": "gestorFinanceiro",
+    "version": "0.0.0",
+    "description": "Sistema de gestão de contas a receber",
+    "author": "Breno Chaves",
+    "type": "module",
+
+    "scripts": {
+        "dev": "node --watch ./server.ts"
+    }
+}
