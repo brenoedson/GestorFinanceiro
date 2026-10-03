@@ -4,8 +4,12 @@
     "description": "Sistema de gestão de contas a receber",
     "author": "Breno Chaves",
     "type": "module",
-
     "scripts": {
-        "dev": "node --watch ./server.ts"
+        "dev": "node --watch ./server.ts",
+        "check": "tsc --noEmit"
+    },
+    "devDependencies": {
+        "@types/node": "^26.6.4",
+        "typescript": "^7.0.2"
     }
 }
