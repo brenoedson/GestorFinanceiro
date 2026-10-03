@@ -52,6 +52,16 @@ app.get('/api/invoices', (request, response) => {
     response.status(200).json(invoices);
 });
 
+app.get('/api/invoices/:id', (request, response) => {
+    const id = +request.params.id;
+    const invoice = invoices.find(invoice => invoice.id === id);
+    if(!invoice) response.status(404).json({ error: { 
+        status:  404,
+        message: 'Recurso não encontrado.' 
+    }});
+    response.status(200).json(invoice);
+});
+
 app.use((request , response) => {
     response.status(404).json({ error: { 
         status:  404,
