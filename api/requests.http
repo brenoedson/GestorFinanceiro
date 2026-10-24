@@ -1,0 +1,7 @@
+@host = http://localhost:3000
+
+### Busca Invoices sem ID
+GET {{host}}/api/invoices
+
+### Busca Invoices por ID
+GET {{host}}/api/invoices/2
