@@ -1,20 +1,20 @@
 {
-    "compilerOptions":{
-        // informa que deve sempre utilizar a versão mais atual
-        "target": "esnext",     
-        // o module define o tipo de exportação
-        // informa que utilizará importe e export, na versão mais atual
-        "module": "nodenext",   
-        // moduleResolution diz como o typescript deve encontrar os módulos
-        "moduleResolution":"nodenext",
-        // o typescript deve indicar qualquer inconformidade do código
-        "strict": true,         
-        // só permitir escrever código que seja possível traduzir em typescript
-        "erasableSyntaxOnly": true,
-        // permitir importar extenções typescript
-        "allowImportingTsExtensions": true,
-        // informa ao compilador para apenas verificar a sintaxe, sem gerar arquivos javascript
-        "noEmit": true, 
-        "types": ["node"]
-    }
+  "compilerOptions": {
+    // informa que deve sempre utilizar a versão mais atual
+    "target": "esnext",
+    // o module define o tipo de exportação
+    // informa que utilizará importe e export, na versão mais atual
+    "module": "nodenext",
+    // moduleResolution diz como o typescript deve encontrar os módulos
+    "moduleResolution": "nodenext",
+    // o typescript deve indicar qualquer inconformidade do código
+    "strict": true,
+    // só permitir escrever código que seja possível traduzir em typescript
+    "erasableSyntaxOnly": true,
+    // permitir importar extenções typescript
+    "allowImportingTsExtensions": true,
+    // informa ao compilador para apenas verificar a sintaxe, sem gerar arquivos javascript
+    "noEmit": true,
+    "types": ["node"]
+  }
 }
