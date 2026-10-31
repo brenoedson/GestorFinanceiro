@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Gestor Financeiro</title>
+</head>
+<body>
+    <div></div>
+
+    <script 
+        crossorigin 
+        src="https://unpkg.com/react@18/umd/react.development.js">
+    </script>
+    <script 
+        crossorigin    
+        src="https://unpkg.com/react-dom@18/umd/react-dom.development.js">
+    </script>
+    <script 
+        crossorigin   
+        src="https://unpkg.com/@babel/standalone/babel.min.js">
+    </script>
+
+    <script type='text/babel'>
+        const container = document.querySelector('div');
+
+        const root = ReactDOM.createRoot(container);
+
+        const invoices = [
+            {
+                id: 1,
+                amount: 125000,
+                status: 'pending',
+                issueDate: '2026-09-03',
+                dueDate: '2026-10-04',
+                customer: {
+                id: 7,
+                name: 'Construtora Meridiano',
+                email: 'contato@meridiano.com'
+                }
+            },
+            {
+                id: 2,
+                amount: 35000,
+                status: 'paid',
+                issueDate: '2026-10-01',
+                dueDate: '2026-11-02',
+                customer: {
+                id: 4,
+                name: 'Gráfica Nova',
+                email: 'comercial@nova.com'
+                }
+            },
+            {
+                id: 3,
+                amount: 301000,
+                status: 'pending',
+                issueDate: '2026-09-10',
+                dueDate: '2026-10-05',
+                customer: {
+                id: 15,
+                name: 'Tenditudo',
+                email: 'contato@tenditudo.com'
+                }
+            }
+        ];
+
+        const InvoiceTitle = () => {
+            return <h1>Faturas</h1>
+        };
+        
+        const InvoiceRow = () => {
+            return (
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            );
+        }
+
+        const InvoiceTable = () => {
+            return (
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Cliente</th>
+                            <th>Valor</th>
+                            <th>Emissão</th>
+                            <th>Vencimento</th>
+                            <th>Situação</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        InvoiceRow();
+                        InvoiceRow();
+                        InvoiceRow();
+                    </tbody>
+                </table>
+            );
+        };
+
+        const App = () => {
+            return <>
+                <InvoiceTitle/>
+                <InvoiceTable/>
+            </>;
+        };
+
+        root.render(<App/>);
+    </script>
+</body>
+</html>
