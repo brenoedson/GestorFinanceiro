@@ -64,18 +64,19 @@
             }
         ];
 
-        const InvoiceTitle = () => {
+        const InvoiceTitle = (props) => {
+            console.log(props);
             return <h1>Faturas</h1>
         };
         
-        const InvoiceRow = () => {
+        const InvoiceRow = (props) => {
             return (
                 <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
+                    <td>{props.data.customer.name}</td>
+                    <td>{props.data.amount}</td>
+                    <td>{props.data.issueDate}</td>
+                    <td>{props.data.dueDate}</td>
+                    <td>{props.data.status === 'paid' ? 'Paga' : 'Pendente'}</td>
                 </tr>
             );
         }
@@ -93,9 +94,10 @@
                         </tr>
                     </thead>
                     <tbody>
-                        InvoiceRow();
-                        InvoiceRow();
-                        InvoiceRow();
+                        {invoices.map((invoice) => <InvoiceRow 
+                            Key={invoice.id}
+                            data={invoice} 
+                        />)}
                     </tbody>
                 </table>
             );
